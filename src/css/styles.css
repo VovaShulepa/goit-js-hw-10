@@ -7,27 +7,14 @@ body {
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* background-color: #fafafa; */
   color: #212121;
   line-height: 1.5;
-  background: linear-gradient(-195deg, #1739faf3, #9aff15f6, #3afff5, #edfd10);
-  background-size: 400% 400%;
-  animation: gradient 20s ease infinite;
-  height: 100vh;
-}
+  background: linear-gradient(270deg, #ed3cff, #e3ee49, #7a0ff5);
+  background-size: 600% 600%;
 
-@keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-
-  50% {
-    background-position: 100% 50%;
-  }
-
-  100% {
-    background-position: 0% 50%;
-  }
+  -webkit-animation: AnimationName 30s ease infinite;
+  -moz-animation: AnimationName 30s ease infinite;
+  animation: AnimationName 30s ease infinite;
 }
 
 h1,
@@ -53,13 +40,13 @@ p {
   display: block;
   border-radius: 10px;
   text-align: center;
-  /* text-transform: uppercase; */
+  text-transform: uppercase;
   padding: 5px;
   max-width: 320px;
   color: rgb(0, 0, 0);
   border: transparent;
-  box-shadow: #3afff5;
-  margin-bottom: 40px;
+  box-shadow: 6px 7px 15px 1px rgba(108, 27, 124, 0.801);
+  margin-bottom: 60px;
 }
 
 
@@ -83,7 +70,7 @@ p {
 
 .country-symbols__img {
   display: block;
-  border-radius: 15px;
+  border-radius: 10px;
 }
 
 .country-item__img {
@@ -123,8 +110,8 @@ p {
 }
 
 .country-list {
-  padding-left: 300px;
-  padding-right: 150px;
+  padding-left: auto;
+  padding-right: auto;
   margin: 0 auto;
 }
 
@@ -140,3 +127,47 @@ p {
 .country-item:not(:last-child) {
   margin-bottom: 15px;
 }
+
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 0% 50%
+  }
+
+  50% {
+    background-position: 100% 50%
+  }
+
+  100% {
+    background-position: 0% 50%
+  }
+}
+
+@-moz-keyframes AnimationName {
+  0% {
+    background-position: 0% 50%
+  }
+
+  50% {
+    background-position: 100% 50%
+  }
+
+  100% {
+    background-position: 0% 50%
+  }
+}
+
+@keyframes AnimationName {
+  0% {
+    background-position: 0% 50%
+  }
+
+  50% {
+    background-position: 100% 50%
+  }
+
+  100% {
+    background-position: 0% 50%
+  }
+}
+
+`
