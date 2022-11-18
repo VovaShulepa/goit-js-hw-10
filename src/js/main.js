@@ -5,7 +5,6 @@ import Notiflix from 'notiflix';
 // ==========  handle-bars =========
 import cardContainer from '../templates/card.hbs';
 import ulCountry from '../templates/ul.hbs';
-
 // ============  function  ========
 import { fetchCountries } from './fetchCountries';
 

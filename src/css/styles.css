@@ -30,6 +30,21 @@ body {
   }
 }
 
+h1,
+h2,
+li,
+p {
+  font-family: 'Ubuntu Mono', monospace;
+}
+
+li {
+  list-style-type: none;
+}
+
+p {
+  margin: auto 10px;
+}
+
 #search-box {
   font: inherit;
   font-family: 'Ubuntu Mono', monospace;
@@ -38,16 +53,16 @@ body {
   display: block;
   border-radius: 10px;
   text-align: center;
-  margin: 130px auto auto;
   /* text-transform: uppercase; */
   padding: 5px;
   max-width: 320px;
   color: rgb(0, 0, 0);
   border: transparent;
   box-shadow: #3afff5;
-  transition: border-color 0.2s;
-
+  margin-bottom: 40px;
 }
+
+
 
 #search-box:focus {
   outline: 1px solid rgb(18, 151, 0);
@@ -57,12 +72,71 @@ body {
   position: relative;
 }
 
-.input-country:focus ~ .form__label {
-  position: absolute;
-  top: 17px;
+.title {
+  text-align: center;
+}
+
+.input-country {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.country-symbols__img {
   display: block;
-  transition: 0.2s;
-  font-size: 1rem;
-  color: #11998e;
+  border-radius: 15px;
+}
+
+.country-item__img {
+  width: 60px;
+  border-radius: 6px;
+}
+
+.country-symbols {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.country-name {
+  margin-left: 10px;
+  font-size: 30px;
+}
+
+.country-list-div {
+  padding: 0;
+}
+
+.country-list-div__item {
+  text-align: center;
+  margin-bottom: 8px;
+  font-size: 25px;
+}
+
+.bold {
+  margin-right: 4px;
+  font-weight: bold;
+}
+
+.country-item {
+  display: flex;
+  align-items: center;
+}
+
+.country-list {
+  padding-left: 300px;
+  padding-right: 150px;
+  margin: 0 auto;
+}
+
+.country-info {
+  margin: 0 auto;
+}
+
+.name-country {
+  font-size: 22px;
   font-weight: 700;
+}
+
+.country-item:not(:last-child) {
+  margin-bottom: 15px;
 }
