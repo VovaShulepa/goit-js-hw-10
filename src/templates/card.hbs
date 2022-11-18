@@ -1,0 +1,16 @@
+<div class="country-symbols">
+    <img class="country-symbols__img" src={{flags.svg}} alt={{flag}} width="50" height="50">
+    <h2 class="country-name">{{name.official}}</h2>
+</div>
+
+
+
+<ul class="country-list-div">
+<li class="country-list-div__item"><span class="bold">Capital:</span>{{capital}}</li>
+<li class="country-list-div__item"><span class="bold">Population:</span>{{population}}</li>
+<li class="country-list-div__item"><span class="bold">Languages:</span>{{#each languages}}
+    {{#if @index includeZero=false}} , {{/if}}
+    {{this}}
+    {{/each}}
+    </li>
+</ul>

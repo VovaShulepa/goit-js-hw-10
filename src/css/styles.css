@@ -53,14 +53,16 @@ body {
   outline: 1px solid rgb(18, 151, 0);
 }
 
-#search-box:placeholder-shown ~ .form__label {
-  font-size: 1.3rem;
-  cursor: text;
-  top: 20px;
-}
-
-
 .form__group {
   position: relative;
+}
 
+.input-country:focus ~ .form__label {
+  position: absolute;
+  top: 17px;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: #11998e;
+  font-weight: 700;
 }
