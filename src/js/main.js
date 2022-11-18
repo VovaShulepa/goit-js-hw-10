@@ -1,12 +1,11 @@
 // =========   Debounce  =========
 import debounce from 'lodash.debounce';
-
 // ===========  Notiflix  =========
 import Notiflix from 'notiflix';
 // ==========  handle-bars =========
-import Handlebars from 'handlebars';
 import cardContainer from '../templates/card.hbs';
 import ulCountry from '../templates/ul.hbs';
+
 // ============  function  ========
 import { fetchCountries } from './fetchCountries';
 
