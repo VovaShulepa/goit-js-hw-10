@@ -1,14 +1,20 @@
-'use strict';
+('use strict');
 
-const BASE_URL = fetch('https://restcountries.com/v3.1/name/');
+const BASE_URL = 'https://restcountries.com/v3.1/name/';
 
 export const fetchCountries = name => {
-  let finalURL = `${BASE_URL}${name}?fields=name,capital,population,flags,languages`;
-
-  return fetch(finalURL).then(response => {
+  return fetch(
+    'https://restcountries.com/v2/all?fields=name,capital,currencies'
+  ).then(response => {
     if (!response.ok) {
       throw new Error(response.status);
     }
     return response.json();
   });
 };
+
+console.log(fetchCountries(name));
+
+//  let finalURL = `${BASE_URL}${countryInput}?fields=name,capital,population,flags,languages`;
+
+// https://restcountries.com/v3.1/name/all?fields=name,capital,population,flags,languages

@@ -7,12 +7,12 @@ body {
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #fafafa;
+  /* background-color: #fafafa; */
   color: #212121;
   line-height: 1.5;
-  background: linear-gradient(-115deg, #1739faf3, #9aff15f6, #3afff5, #edfd10);
+  background: linear-gradient(-195deg, #1739faf3, #9aff15f6, #3afff5, #edfd10);
   background-size: 400% 400%;
-  animation: gradient 15s ease infinite;
+  animation: gradient 20s ease infinite;
   height: 100vh;
 }
 
@@ -30,16 +30,37 @@ body {
   }
 }
 
-
 #search-box {
   font: inherit;
-  padding: 8px;
-  max-width: 320px;
-}
-
-.input-country {
+  font-family: 'Ubuntu Mono', monospace;
+  font-size: 20px;
+  font-weight: 700;
   display: block;
   border-radius: 10px;
   text-align: center;
   margin: 130px auto auto;
+  /* text-transform: uppercase; */
+  padding: 5px;
+  max-width: 320px;
+  color: rgb(0, 0, 0);
+  border: transparent;
+  box-shadow: #3afff5;
+  transition: border-color 0.2s;
+
+}
+
+#search-box:focus {
+  outline: 1px solid rgb(18, 151, 0);
+}
+
+#search-box:placeholder-shown ~ .form__label {
+  font-size: 1.3rem;
+  cursor: text;
+  top: 20px;
+}
+
+
+.form__group {
+  position: relative;
+
 }

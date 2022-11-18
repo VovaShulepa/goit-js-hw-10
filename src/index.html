@@ -4,10 +4,29 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/ukraine.png" />
+
     <title>Homework 10</title>
   </head>
   <body>
-    <input class="input-country" type="text" id="search-box" />
+    <div class="form__group field">
+      <input
+        class="input-country"
+        type="text"
+        id="search-box"
+        placeholder="Country"
+        name="name"
+        id="name"
+        required
+      />
+      <label for="name" class="form__label">Country</label>
+    </div>
     <ul class="country-list"></ul>
     <div class="country-info"></div>
 

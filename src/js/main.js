@@ -5,26 +5,29 @@ const DEBOUNCE_DELAY = 300;
 // =========== Notiflix  ========
 import Notiflix from 'notiflix';
 // =============================
-
 import { fetchCountries } from './fetchCountries';
 
-const inputEl = document.querySelector('#search-box');
+const countryInput = document.querySelector('#search-box');
 const countryList = document.querySelector('.country-list');
 const countryInfo = document.querySelector('.country-info');
 
-const OnCountryInput = event => {
-  event.preventDefault();
+// console.log(fetchCountries(name));
 
-  const searchQuery = inputEl.value.trim();
+const OnCountryInput = event => {
+  const searchQuery = countryInput.value.trim();
 
   fetchCountries(searchQuery)
     .then(data => {
+      if (data.length > 10) {
+        Notiflix.Notify.info(
+          'Too many matches found. Please enter a more specific name.'
+        );
+        return;
+      }
       console.log(data);
     })
     .catch(err => {
-      if (err.message === '404') {
-        alert('Country not found!');
-      }
+      err.message;
     })
     .finally(() => {
       event.target.reset();
@@ -32,4 +35,4 @@ const OnCountryInput = event => {
   console.log(searchQuery);
 };
 
-inputEl.addEventListener('input', OnCountryInput);
+countryInput.addEventListener('input', OnCountryInput);
