@@ -27,13 +27,11 @@ function onInput(event) {
     countryCard.innerHTML = '';
     return;
   }
+
   fetchCountries(searchQuery).then(renderCountryCard).catch(onFetchError);
 }
 
 function renderCountryCard(country) {
-  countryList.innerHTML = '';
-  countryCard.innerHTML = '';
-
   if (country.length > 10) {
     Notiflix.Notify.info(
       'Too many matches found. Please enter a more specific name.'
@@ -43,10 +41,11 @@ function renderCountryCard(country) {
 
   if (country.length >= 2) {
     countryList.innerHTML = ulCountry(country);
-
+    countryCard.innerHTML = '';
     return;
   }
   countryCard.innerHTML = cardContainer(country[0]);
+  countryList.innerHTML = '';
 }
 
 function onFetchError(error) {
