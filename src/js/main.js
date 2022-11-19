@@ -17,11 +17,16 @@ const countryCard = document.querySelector('.country-info');
 countryInput.addEventListener('input', debounce(onInput, DEBOUNCE_DELAY));
 
 function onInput(event) {
-  event.preventDefault();
+  // event.preventDefault();
 
   let searchQuery = event.target.value;
   searchQuery = searchQuery.trim();
 
+  if (!searchQuery) {
+    countryList.innerHTML = '';
+    countryCard.innerHTML = '';
+    return;
+  }
   fetchCountries(searchQuery).then(renderCountryCard).catch(onFetchError);
 }
 
@@ -38,6 +43,7 @@ function renderCountryCard(country) {
 
   if (country.length >= 2) {
     countryList.innerHTML = ulCountry(country);
+
     return;
   }
   countryCard.innerHTML = cardContainer(country[0]);
